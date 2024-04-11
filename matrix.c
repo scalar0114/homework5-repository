@@ -79,13 +79,15 @@ void free_matrix(int **mat, int row)
 
 int main()
 {
-    printf("[----- [hyunseung] [2023041001]] -----]");
-    
+    printf("[----- [hyunseung] [2023041001]] -----]\n");
+
     int row1, row2, col1, col2, **mat1, **mat2, **result;
 
     srand(time(NULL));
 
+    printf("A: ");
     scanf("%d %d", &row1, &col1);
+    printf("B: ");
     scanf("%d %d", &row2, &col2);
 
     // A 메모리 할당
@@ -128,30 +130,30 @@ int main()
     }
 
     // A 출력
-    printf("A:\n");
+    printf("\nA:\n");
     print_matrix(mat1, row1, col1);
 
     // B 출력
-    printf("B:\n");
+    printf("\nB:\n");
     print_matrix(mat2, row2, col2);
 
     // A + B 출력
-    printf("A + B:\n");
+    printf("\nA + B:\n");
     add_matrix(mat1, mat2, result, row1, col1);
     print_matrix(result, row1, col2);
 
     // A - B 출력
-    printf("A - B:\n");
+    printf("\nA - B:\n");
     subtract_matrix(mat1, mat2, result, row1, col1);
     print_matrix(result, row1, col2);
 
     // A 전치 출력
-    printf("Transpose A:\n");
+    printf("\nTranspose A:\n");
     transpose_matrix(mat1, result, row1, col1);
     print_matrix(result, col1, row1);
 
     // A * B 출력
-    printf("A * B:\n");
+    printf("\nA * B:\n");
     multiply_matrix(mat1, mat2, result, row1, col1, row2, col2);
     print_matrix(result, row1, col2);
 
