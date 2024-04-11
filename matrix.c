@@ -79,6 +79,8 @@ void free_matrix(int **mat, int row)
 
 int main()
 {
+    printf("[----- [hyunseung] [2023041001]] -----]");
+    
     int row1, row2, col1, col2, **mat1, **mat2, **result;
 
     srand(time(NULL));
